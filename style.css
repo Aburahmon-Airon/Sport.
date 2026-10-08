@@ -1,0 +1,710 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f1;
+    color: #111;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upper {
+    width: calc(100% - 8rem);
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo i {
+    font-size: 26px;
+    color: black;
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.services a {
+    text-decoration: none;
+    color: inherit;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 2px;
+    transition: all .4s;
+    background: linear-gradient(45deg, black, black, black) 50% 100% /var(--t, 0) 2px no-repeat;
+}
+
+.services a:hover {
+    --t: 100%;
+}
+
+.contact>button {
+    background: #111;
+    padding: 15px 20px;
+    border-radius: 35rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+.contact>button>a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.contact>button:hover {
+    background: #383838;
+}
+
+.ga {
+    gap: 1rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 8rem);
+    max-width: 1600px;
+    min-height: 650px;
+    overflow: hidden;
+    margin: 40px auto 0;
+}
+
+.text {
+    width: 50%;
+}
+
+.text>p {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.text>h1 {
+    font-size: clamp(60px, 7vw, 120px);
+    line-height: 0.9;
+    margin: 25px 0;
+    letter-spacing: -5px;
+    color: #111;
+}
+
+.text>h1>span {
+    display: block;
+    color: #777;
+}
+
+.text p {
+    width: 500px;
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.Explore {
+    position: relative;
+    top: 1rem;
+    color: white;
+    padding: 18px 28px;
+    border-radius: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    background: #111;
+    border: none;
+}
+
+.Explore:hover {
+    transform: translateX(7px);
+}
+
+.imgs {
+    width: 48%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cirle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #deded8;
+    position: absolute;
+    z-index: -1;
+}
+
+.imgs img {
+    width: 500px;
+    height: 570px;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(20px 25px 20px rgba(0, 0, 0, 0.15));
+}
+
+.imgs i {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    position: absolute;
+    z-index: 3;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: top-down 3s ease-in-out infinite;
+}
+
+.i1 {
+    top: 100px;
+    left: 20px;
+}
+
+.i2 {
+    right: 20px;
+    top: 180px;
+    animation-delay: 0.5s;
+}
+
+.i3 {
+    bottom: 80px;
+    left: 100px;
+    animation-delay: 1s;
+}
+
+@keyframes top-down {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+.about {
+    width: calc(100% - 8rem);
+    max-width: 1600px;
+
+    margin: 100px auto;
+
+    padding: 70px 0;
+
+    border-top: 1px solid #ccc;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutTitle {
+    width: 40%;
+}
+
+.aboutTitle span {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.aboutTitle h2 {
+    font-size: 55px;
+    margin-top: 20px;
+}
+
+.aboutText {
+    width: 45%;
+}
+
+.aboutText p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+/* SPORTS */
+
+.sports {
+    width: calc(100% - 8rem);
+    max-width: 1600px;
+
+    margin: 0 auto 100px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.sportCard {
+    min-height: 220px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    transition: 0.35s;
+}
+
+.sportCard i {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.sportCard h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.sportCard p {
+    color: #777;
+}
+
+.sportCard:hover {
+    background: #111;
+    color: white;
+
+    transform: translateY(-10px);
+}
+
+.sportCard:hover p {
+    color: #aaa;
+}
+
+
+/* ADAPTIVE */
+
+@media (max-width: 900px) {
+
+    .header,
+    .hero,
+    .about,
+    .sports {
+        width: calc(100% - 3rem);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroText {
+        width: 100%;
+    }
+
+    .heroText h1 {
+        font-size: 70px;
+    }
+
+    .explore {
+        margin: 0 auto;
+    }
+
+    .heroImage {
+        width: 100%;
+        height: 500px;
+    }
+
+    .heroImage img {
+        width: 400px;
+        height: 480px;
+    }
+
+    .circle {
+        width: 400px;
+        height: 400px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .aboutTitle,
+    .aboutText {
+        width: 100%;
+    }
+
+    .sports {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .header {
+        width: calc(100% - 2rem);
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .hero,
+    .about,
+    .sports {
+        width: calc(100% - 2rem);
+    }
+
+    .heroText h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
+
+    .heroImage img {
+        width: 320px;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .sports {
+        grid-template-columns: 1fr;
+    }
+
+    .aboutTitle h2 {
+        font-size: 40px;
+    }
+}
+
+
+.services {
+    gap: 2rem;
+    display: flex;
+}
+
+.records {
+    width: calc(100% - 12rem);
+    margin: 120px auto;
+}
+
+.recordsTitle {
+    margin-bottom: 50px;
+}
+
+.recordsTitle span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+.recordsTitle h1 {
+    font-size: 55px;
+    margin-top: 15px;
+    letter-spacing: -2px;
+}
+
+.recordCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.record {
+    min-height: 270px;
+    padding: 30px;
+
+    background: #f5f5f2;
+    border: 1px solid #ddd;
+
+    border-radius: 25px;
+
+    transition: 0.35s;
+}
+
+.record i {
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.record h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.record p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.record strong {
+    font-size: 32px;
+}
+
+.record:hover {
+    background: #111;
+    color: white;
+    transform: translateY(-10px);
+}
+
+.record:hover p {
+    color: #aaa;
+}
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 150px;
+    background: #111;
+    color: white;
+}
+
+.footer {
+    width: calc(100% - 12rem);
+    min-height: 250px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerLogo h1 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.footerLogo p {
+    color: #888;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 25px;
+}
+
+.footerLinks a {
+    text-decoration: none;
+    color: inherit;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footerLinks a:hover {
+    color: white;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+}
+
+.socials i {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #444;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.socials i:hover {
+    background: white;
+    color: #111;
+}
+
+.copyright {
+    width: calc(100% - 12rem);
+
+    margin: 0 auto;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #333;
+
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* RECORDS + FOOTER ADAPTIVE */
+
+@media (max-width: 1000px) {
+
+    .records {
+        width: calc(100% - 4rem);
+    }
+
+    .recordCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        width: calc(100% - 4rem);
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 50px 0;
+    }
+
+    .copyright {
+        width: calc(100% - 4rem);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .records {
+        width: calc(100% - 2rem);
+    }
+
+    .recordsTitle h1 {
+        font-size: 40px;
+    }
+
+    .recordCards {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        width: calc(100% - 2rem);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footerLinks {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .copyright {
+        width: calc(100% - 2rem);
+    }
+}
+
+
+.athletes {
+    width: calc(100% - 8rem);
+    max-width: 1600px;
+    margin: 150px auto;
+}
+
+.athletesTitle {
+    margin-bottom: 50px;
+}
+
+.athletesTitle span {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+.athletesTitle h2 {
+    font-size: 55px;
+    margin-top: 15px;
+    letter-spacing: -2px;
+}
+
+.athleteCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.athlete {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.athlete:hover {
+    transform: translateY(-10px);
+}
+
+.athleteImg {
+    height: 330px;
+    overflow: hidden;
+}
+
+.athleteImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.athlete:hover img {
+    transform: scale(1.07);
+}
+
+.athleteInfo {
+    padding: 25px;
+}
+
+.athleteInfo span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #777;
+}
+
+.athleteInfo h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.athleteInfo p {
+    color: #777;
+    line-height: 1.5;
+}
+
+
